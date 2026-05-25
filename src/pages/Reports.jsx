@@ -25,7 +25,7 @@ export default function Reports() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${report.title.replace(/\s+/g, "-").toLowerCase()}.md`;
+    a.download = `${(report.title || "report").replace(/\s+/g, "-").toLowerCase()}.md`;
     a.click();
     URL.revokeObjectURL(url);
   };

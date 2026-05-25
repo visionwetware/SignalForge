@@ -25,13 +25,20 @@ export default function Scan() {
   const [error, setError] = useState(null);
 
   const handleFile = async (e) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    setUploading(true);
+  const file = e.target.files?.[0];
+  if (!file) return;
+  setError(null);
+  setUploading(true);
+  try {
     const { file_url } = await base44.integrations.Core.UploadFile({ file });
     setFileUrl(file_url);
+  } catch (err) {
+    setError(err?.message || "File upload failed.");
+    setFileUrl(null);
+  } finally {
     setUploading(false);
-  };
+  }
+};
 
   const submit = async () => {
     setError(null);
