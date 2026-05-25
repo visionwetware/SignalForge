@@ -1,0 +1,29 @@
+{
+  "name": "InputAsset",
+  "type": "object",
+  "properties": {
+    "asset_type": {
+      "type": "string",
+      "enum": [
+        "image",
+        "text",
+        "url"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "description": "Origin label (upload, reddit, manual)"
+    },
+    "content_ref": {
+      "type": "string",
+      "description": "URL, text body, or file_url"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "asset_type",
+    "content_ref"
+  ]
+}
