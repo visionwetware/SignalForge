@@ -1,0 +1,43 @@
+{
+  "name": "Keyword",
+  "type": "object",
+  "properties": {
+    "term": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "number",
+      "default": 1
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "page",
+        "image",
+        "transcript"
+      ]
+    },
+    "source_page_id": {
+      "type": "string"
+    },
+    "source_image_id": {
+      "type": "string"
+    },
+    "transcript_id": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "evidence_snippet": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "term",
+    "source_type"
+  ]
+}

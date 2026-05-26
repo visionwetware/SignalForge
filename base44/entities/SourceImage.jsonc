@@ -1,0 +1,35 @@
+{
+  "name": "SourceImage",
+  "type": "object",
+  "properties": {
+    "source_page_id": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "local_cached_url": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    },
+    "favorite": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "source_page_id",
+    "image_url"
+  ]
+}

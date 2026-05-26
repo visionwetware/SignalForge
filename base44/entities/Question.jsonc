@@ -1,0 +1,37 @@
+{
+  "name": "Question",
+  "type": "object",
+  "properties": {
+    "prompt": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "medium"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "prompt",
+    "answer"
+  ]
+}
