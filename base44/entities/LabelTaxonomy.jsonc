@@ -1,0 +1,32 @@
+{
+  "name": "LabelTaxonomy",
+  "type": "object",
+  "properties": {
+    "domain": {
+      "type": "string"
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "thresholds": {
+      "type": "object"
+    },
+    "feature_flags": {
+      "type": "object"
+    },
+    "extractor_config": {
+      "type": "object"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "domain",
+    "labels"
+  ]
+}

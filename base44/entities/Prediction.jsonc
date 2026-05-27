@@ -1,0 +1,86 @@
+{
+  "name": "Prediction",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "predicted_label": {
+      "type": "string"
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "open_set_score": {
+      "type": "number"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "matched",
+        "inconclusive",
+        "unknown"
+      ],
+      "default": "inconclusive"
+    },
+    "top_k_labels": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "roi_predictions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "nearest_neighbors": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "cluster_id": {
+      "type": "string"
+    },
+    "reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "requires_human_review": {
+      "type": "boolean",
+      "default": false
+    },
+    "roi_used": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "deck_id",
+    "image_id",
+    "domain",
+    "verdict"
+  ]
+}

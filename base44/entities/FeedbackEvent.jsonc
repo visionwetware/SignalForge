@@ -1,0 +1,53 @@
+{
+  "name": "FeedbackEvent",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "prediction_id": {
+      "type": "string"
+    },
+    "annotation_id": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "confirm",
+        "relabel",
+        "reject",
+        "split_roi",
+        "merge_roi"
+      ],
+      "default": "confirm"
+    },
+    "original_label": {
+      "type": "string"
+    },
+    "corrected_label": {
+      "type": "string"
+    },
+    "roi_geometry": {
+      "type": "object"
+    },
+    "note": {
+      "type": "string"
+    },
+    "created_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "deck_id",
+    "image_id",
+    "action"
+  ]
+}

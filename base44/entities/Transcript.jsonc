@@ -1,0 +1,35 @@
+{
+  "name": "Transcript",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "audio_url": {
+      "type": "string"
+    },
+    "duration_sec": {
+      "type": "number"
+    },
+    "mime_type": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "default": "auto"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "duration_sec",
+    "text"
+  ]
+}

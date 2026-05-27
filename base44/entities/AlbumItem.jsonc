@@ -1,0 +1,16 @@
+{
+  "name": "AlbumItem",
+  "type": "object",
+  "properties": {
+    "album_id": {
+      "type": "string"
+    },
+    "source_image_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "album_id",
+    "source_image_id"
+  ]
+}

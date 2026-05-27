@@ -1,0 +1,71 @@
+{
+  "name": "HandwritingProfile",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Profile name for the handwriting sample"
+    },
+    "sample_image_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Uploaded handwriting sample images"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Plain-language summary of the handwriting style"
+    },
+    "letter_shape_notes": {
+      "type": "string",
+      "description": "AI annotation notes about letter shapes and spacing"
+    },
+    "slant": {
+      "type": "string",
+      "enum": [
+        "left",
+        "neutral",
+        "right"
+      ],
+      "default": "neutral"
+    },
+    "spacing": {
+      "type": "string",
+      "enum": [
+        "tight",
+        "balanced",
+        "wide"
+      ],
+      "default": "balanced"
+    },
+    "stroke_weight": {
+      "type": "string",
+      "enum": [
+        "light",
+        "medium",
+        "heavy"
+      ],
+      "default": "medium"
+    },
+    "roundness": {
+      "type": "number",
+      "default": 50,
+      "description": "0-100 estimate of rounded letterforms"
+    },
+    "baseline_variation": {
+      "type": "number",
+      "default": 30,
+      "description": "0-100 estimate of baseline movement"
+    },
+    "recommended_css": {
+      "type": "object",
+      "description": "CSS-like reading settings that approximate the handwriting profile"
+    }
+  },
+  "required": [
+    "name",
+    "sample_image_urls",
+    "summary"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "roiAnnotator": {
+    "title": "Highlight the area you want AI to learn.",
+    "subtitle": "Use your mouse or finger to paint over the important region.",
+    "emptyState": "No region selected yet. Draw over the image to begin.",
+    "tools": {
+      "highlight": "Highlight",
+      "erase": "Erase",
+      "brushSize": "Brush Size",
+      "undo": "Undo",
+      "redo": "Redo",
+      "clear": "Clear",
+      "saveRegion": "Save Region",
+      "cancel": "Cancel",
+      "advancedToggle": "Advanced Tools",
+      "rectangle": "Rectangle",
+      "polygon": "Polygon",
+      "autoSelect": "Auto-Select Object"
+    },
+    "tooltips": {
+      "autoSelect": "Try automatic object selection, then adjust with Highlight/Erase.",
+      "brushSize": "Increase for large areas, decrease for edges and detail.",
+      "erase": "Remove part of the highlighted region.",
+      "undo": "Revert last stroke",
+      "redo": "Restore reverted stroke",
+      "advanced": "Prefer precise outlines? Use Rectangle or Polygon."
+    },
+    "label": {
+      "fieldLabel": "Region Label",
+      "placeholder": "e.g., nucleus, tictac, cross-shape",
+      "helper": "Choose a consistent label so similar regions group together.",
+      "requiredError": "Please enter a label before saving."
+    },
+    "advanced": {
+      "title": "Advanced Tools",
+      "description": "Prefer precise outlines? Use Rectangle or Polygon."
+    },
+    "confirmClear": {
+      "title": "Clear highlighted region?",
+      "body": "This will remove your current selection.",
+      "confirm": "Clear",
+      "cancel": "Keep Editing"
+    },
+    "toasts": {
+      "saveSuccess": "Region saved. AI will use this to improve future matches.",
+      "saveError": "Could not save region. Please try again.",
+      "selectionRequired": "Please highlight a region before saving."
+    },
+    "review": {
+      "lowConfidence": "Match uncertain — please confirm or correct the highlighted region.",
+      "inconclusive": "Couldn’t confidently match this region yet. Your label will help train it.",
+      "geometryAutoSaved": "Detailed geometry is saved automatically."
+    },
+    "a11y": {
+      "canvas": "Image annotation canvas",
+      "highlightTool": "Highlight tool",
+      "eraseTool": "Erase tool",
+      "brushSizeSlider": "Brush size slider",
+      "undoButton": "Undo last stroke",
+      "redoButton": "Redo last stroke",
+      "clearButton": "Clear current selection",
+      "saveButton": "Save highlighted region",
+      "advancedSection": "Advanced annotation tools"
+    }
+  }
+}

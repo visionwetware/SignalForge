@@ -1,0 +1,47 @@
+{
+  "name": "ClusterAssignment",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "cluster_id": {
+      "type": "string"
+    },
+    "annotation_id": {
+      "type": "string"
+    },
+    "prediction_id": {
+      "type": "string"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "dominant_label": {
+      "type": "string"
+    },
+    "centroid_vector_ref": {
+      "type": "string"
+    },
+    "similarity_to_centroid": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "stale"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "deck_id",
+    "domain",
+    "cluster_id"
+  ]
+}

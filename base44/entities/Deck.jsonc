@@ -1,0 +1,34 @@
+{
+  "name": "Deck",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "owner_user_id": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "domain"
+  ]
+}

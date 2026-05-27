@@ -1,0 +1,45 @@
+{
+  "name": "SourcePage",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "canonical_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "raw_text": {
+      "type": "string"
+    },
+    "extractor_version": {
+      "type": "string",
+      "default": "web-ingest-v1"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "processing",
+        "done",
+        "failed"
+      ],
+      "default": "queued"
+    },
+    "error": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "url"
+  ]
+}

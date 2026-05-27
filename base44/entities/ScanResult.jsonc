@@ -1,0 +1,58 @@
+{
+  "name": "ScanResult",
+  "type": "object",
+  "properties": {
+    "source_image_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "scanning",
+        "done",
+        "failed"
+      ],
+      "default": "queued"
+    },
+    "score": {
+      "type": "number"
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string",
+      "default": "signalforge-image-v1"
+    },
+    "scanned_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "error": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_image_id",
+    "status"
+  ]
+}

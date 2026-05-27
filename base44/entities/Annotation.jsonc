@@ -1,0 +1,83 @@
+{
+  "name": "Annotation",
+  "type": "object",
+  "properties": {
+    "annotation_id": {
+      "type": "string"
+    },
+    "deck_id": {
+      "type": "string"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "roi_type": {
+      "type": "string",
+      "enum": [
+        "brush_mask",
+        "rectangle",
+        "polygon",
+        "mask"
+      ],
+      "default": "brush_mask"
+    },
+    "roi_geometry": {
+      "type": "object"
+    },
+    "label": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "deleted"
+      ],
+      "default": "active"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "predicted",
+        "corrected"
+      ],
+      "default": "manual"
+    },
+    "model_version_at_creation": {
+      "type": "string"
+    },
+    "roi_crop_ref": {
+      "type": "string"
+    },
+    "embedding_ref_id": {
+      "type": "string"
+    },
+    "quality_metadata": {
+      "type": "object"
+    },
+    "created_by": {
+      "type": "string"
+    },
+    "updated_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "deck_id",
+    "image_id",
+    "roi_type",
+    "roi_geometry",
+    "label"
+  ]
+}

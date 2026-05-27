@@ -1,0 +1,62 @@
+{
+  "name": "TrainingJob",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "job_type": {
+      "type": "string",
+      "enum": [
+        "index_rebuild",
+        "classifier_head",
+        "fine_tune",
+        "cluster_recompute"
+      ],
+      "default": "index_rebuild"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "running",
+        "completed",
+        "failed"
+      ],
+      "default": "queued"
+    },
+    "trigger": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "scheduled",
+        "new_annotations",
+        "drift"
+      ],
+      "default": "manual"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "error": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "deck_id",
+    "domain",
+    "job_type"
+  ]
+}

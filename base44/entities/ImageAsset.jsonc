@@ -1,0 +1,42 @@
+{
+  "name": "ImageAsset",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "source_image_id": {
+      "type": "string"
+    },
+    "analysis_result_id": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "quality_metadata": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "image_url"
+  ]
+}

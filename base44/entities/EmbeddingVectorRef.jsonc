@@ -1,0 +1,54 @@
+{
+  "name": "EmbeddingVectorRef",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "annotation_id": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "label": {
+      "type": "string"
+    },
+    "vector": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "vector_ref": {
+      "type": "string"
+    },
+    "extractor": {
+      "type": "string"
+    },
+    "feature_meta": {
+      "type": "object"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "deleted"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "deck_id",
+    "image_id",
+    "annotation_id",
+    "vector"
+  ]
+}

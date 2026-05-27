@@ -1,0 +1,49 @@
+{
+  "name": "ModelVersion",
+  "type": "object",
+  "properties": {
+    "deck_id": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "default": "uap"
+    },
+    "version": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "retrieval",
+        "classifier_head",
+        "fine_tuned"
+      ],
+      "default": "retrieval"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "shadow",
+        "canary",
+        "active",
+        "rolled_back"
+      ],
+      "default": "shadow"
+    },
+    "dataset_snapshot_id": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "artifact_refs": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "deck_id",
+    "domain",
+    "version"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "AnalysisResult",
+  "type": "object",
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "score": {
+      "type": "number",
+      "description": "0-100 credibility/authenticity"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "0-100 model confidence"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "authentic",
+        "suspicious",
+        "manipulated",
+        "inconclusive"
+      ]
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ai_likelihood": {
+      "type": "number",
+      "description": "0-100 probabilistic estimate that an image is AI-generated"
+    },
+    "ai_confidence": {
+      "type": "number",
+      "description": "0-100 evidence quality for AI-generation assessment"
+    },
+    "ai_verdict": {
+      "type": "string",
+      "enum": [
+        "likely_ai_generated",
+        "possibly_ai_generated",
+        "inconclusive",
+        "likely_authentic_photo"
+      ]
+    },
+    "ai_signals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ai_explanation": {
+      "type": "string"
+    },
+    "ai_forensic_details": {
+      "type": "object"
+    },
+    "model_meta": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "asset_id",
+    "score"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "roiAnnotator": {
+    "title": "ROI Annotation",
+    "tabs": {
+      "quick": "Quick Highlight (Recommended)",
+      "precision": "Precision Shapes (Advanced)"
+    },
+    "canvas": {
+      "hintQuick": "Paint over the area you want AI to learn.",
+      "hintPrecision": "Draw exact boundaries for precise labeling.",
+      "statusGeometrySaved": "Detailed geometry is saved automatically."
+    },
+    "tools": {
+      "highlight": "Highlight",
+      "erase": "Erase",
+      "brushSize": "Brush Size",
+      "rectangle": "Rectangle",
+      "polygon": "Polygon",
+      "editPoints": "Edit Points",
+      "showCoordinates": "Show coordinates",
+      "undo": "Undo",
+      "redo": "Redo",
+      "clear": "Clear"
+    },
+    "fields": {
+      "regionLabel": "Region Label",
+      "regionLabelPlaceholder": "e.g., nucleus, tictac, cross-shape",
+      "regionLabelHelper": "Use consistent labels for better matching.",
+      "optionalNote": "Optional note",
+      "optionalNotePlaceholder": "Add context for this region (optional)"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "saveRegion": "Save Region"
+    },
+    "messages": {
+      "selectionRequired": "Please highlight a region before saving.",
+      "labelRequired": "Please enter a label before saving.",
+      "saveSuccess": "Region saved. AI will use this to improve future matches.",
+      "saveError": "Could not save region. Please try again."
+    },
+    "confirmClear": {
+      "title": "Clear highlighted region?",
+      "body": "This will remove your current selection.",
+      "confirm": "Clear",
+      "cancel": "Keep Editing"
+    },
+    "modeSwitch": {
+      "preserveNotice": "Your current selection is preserved when switching tabs.",
+      "quickToPrecision": "Converted highlight to editable shape.",
+      "precisionToQuick": "Converted shape to highlight mask."
+    },
+    "preferences": {
+      "rememberLastMode": "Remember last used annotation mode"
+    },
+    "a11y": {
+      "annotationWindow": "ROI annotation window",
+      "quickTab": "Quick highlight tab",
+      "precisionTab": "Precision shapes tab",
+      "imageCanvas": "Image annotation canvas",
+      "highlightTool": "Highlight tool",
+      "eraseTool": "Erase tool",
+      "brushSizeSlider": "Brush size slider",
+      "rectangleTool": "Rectangle tool",
+      "polygonTool": "Polygon tool",
+      "editPointsTool": "Edit polygon points tool",
+      "showCoordinatesToggle": "Show coordinates toggle",
+      "undoButton": "Undo last action",
+      "redoButton": "Redo last action",
+      "clearButton": "Clear current selection",
+      "regionLabelInput": "Region label input",
+      "optionalNoteInput": "Optional note input",
+      "cancelButton": "Cancel annotation",
+      "saveButton": "Save annotated region"
+    }
+  }
+}

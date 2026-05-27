@@ -1,0 +1,43 @@
+{
+  "name": "SourceImage",
+  "type": "object",
+  "properties": {
+    "source_page_id": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "local_cached_url": {
+      "type": "string"
+    },
+    "hash": {
+      "type": "string"
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    },
+    "favorite": {
+      "type": "boolean",
+      "default": false
+    },
+    "relevance_score": {
+      "type": "number",
+      "description": "0-100 estimate of how directly this image relates to the source article"
+    },
+    "relevance_reason": {
+      "type": "string",
+      "description": "Short explanation of why this image was kept for the Pokedex"
+    }
+  },
+  "required": [
+    "source_page_id",
+    "image_url"
+  ]
+}

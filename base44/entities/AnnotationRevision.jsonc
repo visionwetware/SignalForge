@@ -1,0 +1,38 @@
+{
+  "name": "AnnotationRevision",
+  "type": "object",
+  "properties": {
+    "annotation_id": {
+      "type": "string"
+    },
+    "deck_id": {
+      "type": "string"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "revision_type": {
+      "type": "string",
+      "enum": [
+        "create",
+        "update",
+        "delete",
+        "feedback_correction"
+      ],
+      "default": "update"
+    },
+    "previous_data": {
+      "type": "object"
+    },
+    "new_data": {
+      "type": "object"
+    },
+    "edited_by": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "annotation_id",
+    "revision_type"
+  ]
+}
